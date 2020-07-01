@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content=" This App fetches weather information depending on your search."/>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <link rel="apple-touch-icon" href="img/bg4.jpg"/>
+    <link rel="manifest" href="./manifest.json"/>
+    <link rel="stylesheet"  href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="images/png" href="img/icon_logo.png"/>
+    <title>Weather App </title>
+</head>
+<body>
+    <noscript>You need to enable Javascript to run this app!</noscript>
+    <div class="container">
+        <header>
+            
+                <input type="text" class="search_box" autocomplete="on"
+             placeholder="Search for a city...">
+                    
+            
+            
+                <button type="submit"  id="search_button" name="Click this button to search for a city" class="get_info" placeholder="Get Info">
+                    <i class="fa fa-search"></i>
+                   </button>
+      
+
+                  </header>
+        <main>
+            <seciton class="location">
+                <div class="city"></div>
+                <div class="date"></div>
+            </seciton>
+
+                <div class="current">
+                    <div class="temp"></div>
+                    <img class="img" src=""  alt="">
+                    <div class="weather"></div>
+                      
+                 </div>
+           
+        </main>
+
+        
+
+    </div>
+    
+    <script>
+        if('serviceWorker' in navigator){
+            window.addEventListener('load', () =>{
+                navigator.serviceWorker.register('./serviceWorker.js')
+                .then((reg) => console.log('Success: ', reg.scope))
+                .catch((err) => console.log('Failure: ', err))
+            })
+        }
+    </script>
+</body>
+</html>
