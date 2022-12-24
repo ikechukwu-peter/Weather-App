@@ -16,7 +16,7 @@ let DOMstring = {
  //An obeject with api key and url for fetching from the weather api. Please you should use your own api key.
 const api ={
     url: 'http://api.weatherapi.com/v1/current.json?key',
-    key: '7e3a305ab0de4f649f003625202606'
+    key: ''
 };
 
 
